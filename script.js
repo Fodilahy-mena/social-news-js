@@ -30,7 +30,7 @@ const addNewLink = () => {
 	const linkTitle = prompt('What is the title of your link?');
     const newLinkUrl = prompt('Entr the url?');
     const linkAuthor = prompt('Hwo is the author?');
-    if (newLinkUrl !== newLinkUrl.startsWith("http://") || newLinkUrl !== newLinkUrl.startsWith("https://") && newLinkUrl !== newLinkUrl.endsWith(".com")) {
+    if (!newLinkUrl.startsWith("http://") || !newLinkUrl.startsWith("https://") || !newLinkUrl.endsWith(".com")) {
         commonLinkUrl = `http://${newLinkUrl}.com`;
     } else {
         commonLinkUrl = newLinkUrl;
